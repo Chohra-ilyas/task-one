@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background : linear-gradient(#01012e,#240019);
+    width: 100%;
+    height: calc(100vh - 40px);
+    font-family: cursive;
+    padding: 20px 0;
+}
+h1{
+    text-align: center;
+    color: aqua;
+}
+.begin{
+    color: rgb(53, 66, 182);
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 70px;
+    width: 80%;
+    height: 60%;
+    background: linear-gradient(rgb(5, 129, 151),rgb(10, 21, 172));
+    padding: 20px 50px;
+}
+section ul li{
+    list-style: none;
+    margin: 70px 15px;
+    width: 300px;
+}
+a{
+    text-decoration: none;
+    color: rgb(9, 46, 78);
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    background-color: cyan;
+    padding: 7px 16px;
+    border-radius: 15px 12px;
+    box-shadow: 0 0 8px cyan,0 0 25px cyan;
+    display: block;
+}
+ul:hover li a{
+    opacity: 0.1;
+    transition: 1s;
+}
+ul li a:hover{
+    transform: scale(1.2);
+    transition: 0.7s;
+    opacity: 1;
+    box-shadow: 0 0 5px cyan,0 0 25px cyan ,0 0 50px cyan,0 0 100px cyan,0 0 150px cyan;
+}
+ul{
+    margin: 0 20px;
+    position: relative;
+}
+ul li::after{
+    content: attr(data-texte);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 70px;
+    font-weight: 800;
+    opacity: 0;
+    pointer-events: none;
+    letter-spacing: 50px;
+    transition: 0.5s;
+    z-index: 99;
+}
+ul li:hover:after{
+    opacity: 0.8;
+    letter-spacing: 3px;
+}
+section p{
+    margin: 10px 0;
+    color: white;
+    font-size: 18px;
+}
+section h3{
+    margin: 40px 0;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+
+@media (max-width:1000px){
+    section{
+        height: auto;
+        width: calc(100% - 100px);
+        flex-direction: column;
+    }
+}
